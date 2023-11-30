@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
 
-cherry_dict = {'c-light': 'lightcoral',
-               'c-dark': 'mediumvioletred',
-               'c-v-dark': 'darkorchid',
+cherry_dict = {'c-light': 'red',
+               'c-dark': 'brown',
+               'c-v-dark': 'black',
                'c-negro' : 'dimgray',
-               'c-f-color' : 'bisque'}
+               'c-f-color' : 'hotpink'}
 
 ROBOFLOW_API_KEY = "dewRu1upu5sImkWrjMbE"
 ROBOFLOW_MODEL_ENDPOINT = "cherry-colors"

@@ -54,7 +54,7 @@ def upload(request):
     save_data_to_lot(bucket_name, lot_name, f'predictions_{image_code}.jpg', f'/tmp/predictions_{image_code}.jpg', 'image')
 
     #-------------------------PEDICEL-------------------
-    compressed_image_content = compress_image(image_content, target_size_bytes=1500000)
+    compressed_image_content = compress_image(image_content, target_size_bytes=2000000)
     base64_img_data = base64.b64encode(compressed_image_content)
 
     pedicel_predictions = requests.post(pedicel_prediction_url, data=base64_img_data, headers={

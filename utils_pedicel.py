@@ -2,10 +2,10 @@ from roboflow import Roboflow
 from PIL import Image
 import io
 
-pedicel_dict = {'ped':'white',
-                'sin-ped':'black',
+pedicel_dict = {'ped':'green',
+                'sin-ped':'red',
                 'doble':'purple',
-                's-doble':'red'}
+                's-doble':'hotpink'}
 
 ROBOFLOW_API_KEY = "dewRu1upu5sImkWrjMbE"
 ROBOFLOW_MODEL_ENDPOINT = "cherry-pedicel"
@@ -26,7 +26,7 @@ pedicel_model = project.version(ROBOFLOW_VERSION).model
 pedicel_model.confidence = 20
 pedicel_model.overlap = 30
 
-def compress_image(image_content, target_size_bytes=1500000):
+def compress_image(image_content, target_size_bytes=2000000):
     # Load the image from image_content
     image = Image.open(io.BytesIO(image_content))
     image_format = image.format  # Get the original image format (e.g., "JPEG", "PNG")
